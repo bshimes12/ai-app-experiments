@@ -77,7 +77,7 @@ tot_chain = SequentialChain(
 #print(tot_chain.run(
 #   problem="Getting dog to walk",
 #   factors="cold outside, dog is lazy, has a mind of its own",
-#   num_solutions=3
+#   num_solutions=4
 #))
 
 theProblem = "wanting to shift from project manager role to a more hands on customer facing technical role"
