@@ -1,14 +1,20 @@
+## Tree of Thoughts: Deliberate Problem Solving with Large Language Models
+## https://arxiv.org/abs/2305.10601
+
 from langchain.prompts import PromptTemplate
 from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
 from langchain_openai import ChatOpenAI
+import theProblems
 #from config import set_environment
 
 #set_environment()
 
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4", n=3)
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
-Generate {num_solutions} distinct solutions for {problem}. Consider factors like {factors}.
+You are a system engineer with a strong understanding of technical project management techniques to decompose problems and make thoughtful solution recommendations. Generate {num_solutions} distinct solutions for {problem}. Consider factors like {factors}.
 
 Solutions:
 """
@@ -44,26 +50,28 @@ ranking_prompt = PromptTemplate(
   input_variables=["enhanced_reasoning"]
 )
 
+
+
 solutions_chain = LLMChain(
-   llm=ChatOpenAI(),
+   llm=llm,
    prompt=solutions_prompt,
    output_key="solutions",
    verbose=True
 )
 evalutation_chain = LLMChain(
-   llm=ChatOpenAI(),
+   llm=llm,
    prompt=evaluation_prompt,
    output_key="evaluations",
    verbose=True
 )
 reasoning_chain = LLMChain(
-   llm=ChatOpenAI(),
+   llm=llm,
    prompt=reasoning_prompt,
    output_key="enhanced_reasoning",
    verbose=True
 )
 ranking_chain = LLMChain(
-   llm=ChatOpenAI(),
+   llm=llm,
    prompt=ranking_prompt,
    output_key="ranked_solutions",
    verbose=True
@@ -74,15 +82,12 @@ tot_chain = SequentialChain(
    output_variables=["ranked_solutions"],
    verbose=True
 )
-#print(tot_chain.run(
-#   problem="Getting dog to walk",
-#   factors="cold outside, dog is lazy, has a mind of its own",
-#   num_solutions=4
-#))
 
-theProblem = "need to count the number of wild animals visiting my yard each night"
-theFactors = "too dark to see, elusive nature of wildlife, late at night"
-theNumSolutions = 3
+result = theProblems.TheRestaurantDefinition()
+theProblem = result["theRestaurantProblem"]  
+theFactors = result["theRestaurantFactors"]  
+
+theNumSolutions = 5
 
 result = (tot_chain.invoke(
         {

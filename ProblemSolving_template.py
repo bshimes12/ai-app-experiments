@@ -3,7 +3,7 @@ from langchain_openai import OpenAI
 from langchain_openai import ChatOpenAI
 from datetime import datetime
 import ProblemSolvingTechniques
-import theProblem
+import theProblems
 
 
 #from config import set_environment
@@ -19,13 +19,13 @@ model = ChatOpenAI(
 
 
 # The Problem
-myProblem = theProblem.restaurantFoodWaste
-
-myTechnique = ProblemSolvingTechniques.SystemsThinkingApproach
+result = theProblems.TheRestaurantDefinition()
+theProblem = result["theRestaurantProblem"]  
+myTechnique = ProblemSolvingTechniques.SolutionEvaluationMatrixPrompt
 
 prompt = PromptTemplate(input_variables=["problem"], template=myTechnique)
 chain = prompt | model
-outputFromModel = chain.invoke({"problem": myProblem})
+outputFromModel = chain.invoke({"problem": theProblem})
 #print(outputFromModel)
 #print(outputFromModel.content)
 
