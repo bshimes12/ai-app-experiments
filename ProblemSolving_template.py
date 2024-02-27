@@ -17,6 +17,7 @@ model = ChatOpenAI(
 
 #myTemplate = "Classify the sentiment of this text: {text}"
 
+#https://pawandongre.medium.com/32-chatgpt-prompts-to-improve-problem-solving-5440fed9c2f3
 ## SWOT ## 
 #myTemplate = "Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for a proposed solution to a (specific problem: {problem})."
 
