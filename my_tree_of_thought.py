@@ -2,9 +2,9 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
 from langchain_openai import ChatOpenAI
-from config import set_environment
+#from config import set_environment
 
-set_environment()
+#set_environment()
 
 
 solutions_template = """
@@ -80,8 +80,8 @@ tot_chain = SequentialChain(
 #   num_solutions=4
 #))
 
-theProblem = "wanting to shift from project manager role to a more hands on customer facing technical role"
-theFactors = "competitive market, middle age, cannot take pay cut, less technical experience"
+theProblem = "need to count the number of wild animals visiting my yard each night"
+theFactors = "too dark to see, elusive nature of wildlife, late at night"
 theNumSolutions = 3
 
 result = (tot_chain.invoke(
