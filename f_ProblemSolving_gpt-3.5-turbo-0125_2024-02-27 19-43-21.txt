@@ -1,0 +1,12 @@
+Hypothesis: 
+One potential solution to prevent packages from going missing from front porches is to utilize a secure delivery box or locker system. Packages placed in a locked box or locker will be less likely to be stolen or moved by individuals passing by. 
+
+Methodology: 
+1. Obtain a secure delivery box or locker system designed for receiving packages.
+2. Install the delivery box or locker outside the front porch of a residential location.
+3. Place a test package inside the delivery box or locker.
+4. Monitor the delivery box or locker over a period of time to ensure the package remains secure.
+5. Compare the results of packages placed in the delivery box or locker versus packages left in the open on the front porch without security measures.
+
+Anticipated results:
+It is expected that the test package placed inside the secure delivery box or locker will remain in place and be undisturbed, while packages left in the open on the front porch may go missing or be stolen. If the test package in the secure delivery box or locker remains secure, this would support the hypothesis that implementing a secure delivery system can prevent packages from going missing from front porches.

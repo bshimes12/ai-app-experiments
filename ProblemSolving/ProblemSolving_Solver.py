@@ -19,9 +19,9 @@ model = ChatOpenAI(
 
 
 # The Problem
-result = theProblems.TheRestaurantDefinition()
-theProblem = result["theRestaurantProblem"]  
-myTechnique = ProblemSolvingTechniques.SolutionEvaluationMatrixPrompt
+theSituation = theProblems.THeMissingMail()
+theProblem = theSituation["THE_PROBLEM"]  
+myTechnique = ProblemSolvingTechniques.ExperimentalProblemSolving
 
 prompt = PromptTemplate(input_variables=["problem"], template=myTechnique)
 chain = prompt | model
@@ -38,7 +38,7 @@ str_current_datetime = str(current_datetime)
 # create a file object along with extension
 file_name = str_current_datetime+".txt"
 
-f = open("file "+ theModel + " " + str_current_datetime+ ".txt", "x")
+f = open("f_ProblemSolving_" + theModel + "_" + str_current_datetime+ ".txt", "x")
 f.write(outputFromModel.content)
 f.close()
 

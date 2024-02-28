@@ -83,9 +83,9 @@ tot_chain = SequentialChain(
    verbose=True
 )
 
-result = theProblems.TheRestaurantDefinition()
-theProblem = result["theRestaurantProblem"]  
-theFactors = result["theRestaurantFactors"]  
+theSituation = theProblems.THeMissingMail()
+theProblem = theSituation["THE_PROBLEM"]  
+theFactors = theSituation["THE_FACTORS"]  
 
 theNumSolutions = 5
 

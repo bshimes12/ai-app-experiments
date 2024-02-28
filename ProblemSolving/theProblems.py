@@ -7,7 +7,7 @@ def TheStoreProblem():
 
 def TheRestaurantDefinition():
     return {
-        "theRestaurantProblem": 
+        "THE_PROBLEM": 
         """
         Excessive Food Waste in a Mid-Sized Restaurant
         Background:
@@ -30,10 +30,15 @@ def TheRestaurantDefinition():
 
         Customers are unaware of the impact of their choices, such as requesting multiple side dishes they don't finish or not considering taking leftovers home.
         The restaurant has not effectively communicated its sustainability goals or engaged customers in its efforts to reduce waste.""",
-                "theRestaurantFactors": """Fluctuating Customer Numbers: Difficulty in predicting the number of customers, especially during special events or holidays, complicates inventory and portion size planning.
+                "THE_FACTORS": """Fluctuating Customer Numbers: Difficulty in predicting the number of customers, especially during special events or holidays, complicates inventory and portion size planning.
         Supplier Packaging: Ingredients come in pre-determined quantities or packaging that may not align with the restaurant's usage patterns, leading to excess.
         Cultural Norms and Expectations: Customers expect a variety of menu options and generous portion sizes, which pressures the restaurant to conform to these expectations, often at the expense of increased waste.
         Economic and Regulatory Challenges: Initiatives to reduce waste, such as composting or donating unused food, might be hindered by local regulations, lack of infrastructure, or financial constraints.
         """
     }
-
+def THeMissingMail():
+    return {
+        "THE_PROBLEM": "A package says it was delivered but it is missing from my front porch.",
+        "THE_FACTORS": "theives, dog, hard to see house numbers"
+        
+    }

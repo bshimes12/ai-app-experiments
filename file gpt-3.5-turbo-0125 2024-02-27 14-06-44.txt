@@ -1,9 +1,0 @@
-In this scenario, the excessive food waste in the mid-sized restaurant is a complex problem with interconnected elements. The main challenges of overordering and inventory mismanagement, menu design and portion sizes, inefficient food preparation processes, and lack of customer awareness and engagement all contribute to the overall issue of food waste.
-
-One feedback loop to consider is how overordering and inventory mismanagement lead to wastage, which in turn causes financial losses for the restaurant. This can then create a cycle of trying to make up for losses by overordering again, perpetuating the problem.
-
-Another feedback loop exists between inefficient food preparation processes and menu design. If the menu includes dishes with high waste levels, this can lead to more food being wasted during preparation. This waste can then compound the issue of overordering and inventory mismanagement, as there may be excess ingredients that are not used efficiently.
-
-Potential leverage points to address these issues could include implementing a more robust inventory management system to accurately track ingredient usage and reduce overordering, redesigning the menu to minimize waste and offer more sustainable options, providing training for kitchen staff on waste reduction techniques, and engaging customers through education and incentives to reduce their own waste.
-
-Addressing these interconnected elements and feedback loops through a systems thinking approach can help the restaurant effectively tackle the problem of excessive food waste and align with its sustainability goals.
