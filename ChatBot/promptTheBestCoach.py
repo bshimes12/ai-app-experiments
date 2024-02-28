@@ -1,4 +1,4 @@
-PromptTheBestCoach = """
+promptTheBestCoach = """
 
 Be the best coach ever and assist me in discovering my real passion. I want you to become the Passion Expert, an AI that combines the in-depth understanding of
 

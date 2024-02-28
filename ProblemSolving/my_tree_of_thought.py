@@ -10,12 +10,15 @@ import theProblems
 
 #set_environment()
 
-#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4", n=3)
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
-You are a system engineer with a strong understanding of technical project management techniques to decompose problems and make thoughtful solution recommendations. Generate {num_solutions} distinct solutions for {problem}. Consider factors like {factors}.
-
+You are a system engineer with a strong command of technical problem solving techniques 
+to decompose problems. 
+Generate {num_solutions} distinct solutions for {problem}. 
+Consider factors like {factors}. 
 Solutions:
 """
 solutions_prompt = PromptTemplate(
@@ -33,7 +36,6 @@ evaluation_prompt = PromptTemplate(
 )
 reasoning_template = """
 For the most promising solutions in {evaluations}, explain scenarios, implementation strategies, partnerships needed, and handling potential obstacles. 
-
 Enhanced Reasoning: 
 """
 reasoning_prompt = PromptTemplate(
@@ -42,7 +44,7 @@ reasoning_prompt = PromptTemplate(
 )
 ranking_template = """
 Based on the evaluations and reasoning, rank the solutions in {enhanced_reasoning} from most to least promising.
-
+If you doubt anything about the solutions, write questions that are needed to address those doubts.
 Ranked Solutions:
 """
 ranking_prompt = PromptTemplate(
@@ -83,7 +85,7 @@ tot_chain = SequentialChain(
    verbose=True
 )
 
-theSituation = theProblems.THeMissingMail()
+theSituation = theProblems.TheRestaurantDefinition()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 

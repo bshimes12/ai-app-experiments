@@ -1,8 +1,9 @@
 
 import os
 import openai
-import ChatBot.myActAsPrompts as myActAsPrompts
-import pro
+import myActAsPrompts as myActAsPrompts
+import promptTeamPremortem as promptTeamPremortem
+import promptTheBestCoach as promptTheBestCoach
 
 #from config import set_environment
 #set_environment()
@@ -13,7 +14,7 @@ client = OpenAI()
 def chatbot():
   # Create a list to store all the messages for context
   messages = [
-    {"role": "system", "content": myActAsPrompts.petBehaviorist},
+    {"role": "system", "content": promptTheBestCoach.promptTheBestCoach},
   ]
 
   # Keep repeating the following

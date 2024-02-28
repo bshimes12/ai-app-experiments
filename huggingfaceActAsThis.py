@@ -2,7 +2,7 @@ from langchain_community.llms import HuggingFaceEndpoint
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 import myPrompts 
-import myActAsPrompts 
+import ChatBot.myActAsPrompts as myActAsPrompts 
 
 from config import set_environment
 set_environment()
