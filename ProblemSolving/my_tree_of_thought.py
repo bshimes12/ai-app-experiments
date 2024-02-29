@@ -52,8 +52,6 @@ ranking_prompt = PromptTemplate(
   input_variables=["enhanced_reasoning"]
 )
 
-
-
 solutions_chain = LLMChain(
    llm=llm,
    prompt=solutions_prompt,
