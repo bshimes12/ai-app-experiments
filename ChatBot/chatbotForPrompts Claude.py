@@ -9,22 +9,11 @@ import promptTheBestCoach as promptTheBestCoach
 #set_environment()
 
 
-my_api_key = "sk-ant-api03--a0r-lgAA"
+my_api_key = "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"
 client = anthropic.Anthropic(
     # defaults to os.environ.get("ANTHROPIC_API_KEY")
     api_key=my_api_key
 )
-"""
-
-response = client.messages.create(
-    model="claude-3-opus-20240229",
-    max_tokens=1024,
-    messages=[
-        {"role": "user", "content": "Hello, Claude"}
-    ]
-)
-#print(response.content)
-"""
 
 
 
@@ -53,12 +42,14 @@ def chatbot():
       max_tokens=1024,
       messages=messages,
       temperature=1,
-      system="you are an astrologer"
+      system=myActAsPrompts.tea_taster
     )
 
     # Print the response and add it to the messages list
-    chat_message = response.content
-    #chat_message = response['choices'][0]['message']['content']
+    claude_response = response.content[0].text
+  
+    chat_message = claude_response
+  
     print(f"Bot: {chat_message}")
     messages.append({"role": "assistant", "content": chat_message})
 
