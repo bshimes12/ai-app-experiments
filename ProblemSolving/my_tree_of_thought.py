@@ -6,9 +6,9 @@ from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
 from langchain_openai import ChatOpenAI
 import theProblems
-#from config import set_environment
+from config import set_environment
 
-#set_environment()
+set_environment()
 
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
 llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")

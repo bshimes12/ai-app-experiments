@@ -5,16 +5,16 @@ import myActAsPrompts as myActAsPrompts
 import promptTeamPremortem as promptTeamPremortem
 import promptTheBestCoach as promptTheBestCoach
 
-#from config import set_environment
-#set_environment()
+from config import set_environment
+set_environment()
 
 
-my_api_key = ""
-client = anthropic.Anthropic(
+#my_api_key = ""
+#client = anthropic.Anthropic(
     # defaults to os.environ.get("ANTHROPIC_API_KEY")
-    api_key=my_api_key
-)
-
+ #   api_key=my_api_key
+#)
+client = anthropic.Anthropic()
 
 
 
@@ -42,7 +42,7 @@ def chatbot():
       max_tokens=1024,
       messages=messages,
       temperature=1,
-      system=myActAsPrompts.tea_taster
+      system=myActAsPrompts.theBestCoach
     )
 
     # Print the response and add it to the messages list

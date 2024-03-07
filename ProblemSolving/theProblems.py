@@ -34,6 +34,7 @@ def TheRestaurantDefinition():
         Supplier Packaging: Ingredients come in pre-determined quantities or packaging that may not align with the restaurant's usage patterns, leading to excess.
         Cultural Norms and Expectations: Customers expect a variety of menu options and generous portion sizes, which pressures the restaurant to conform to these expectations, often at the expense of increased waste.
         Economic and Regulatory Challenges: Initiatives to reduce waste, such as composting or donating unused food, might be hindered by local regulations, lack of infrastructure, or financial constraints.
+        Financial state of the restaurant: solutions cost additional money and the restaurant may be unable to absorb that cost.
         """
     }
 def THeMissingMail():
