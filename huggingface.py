@@ -9,9 +9,9 @@ set_environment()
 #repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
 #repo_id = "google/gemma-7b"
 #repo_id = "google/gemma-2b"
-#repo_id = "google/gemma-7b-it"
+repo_id = "google/gemma-7b-it"
 #repo_id = "google/flan-t5-xxl"
-repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+#repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 
 question = "why is the sky blue? "
 
