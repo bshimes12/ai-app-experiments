@@ -1,23 +1,18 @@
 
 import os
+import sys
+import time
 import anthropic
 import myActAsPrompts as myActAsPrompts
-import promptTeamPremortem as promptTeamPremortem
-import promptTheBestCoach as promptTheBestCoach
+# Get the absolute path of the root directory
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Add the root directory to the Python path
+sys.path.append(ROOT_DIR)
 
-from config import set_environment
+from myModules.config import set_environment
 set_environment()
 
-
-#my_api_key = ""
-#client = anthropic.Anthropic(
-    # defaults to os.environ.get("ANTHROPIC_API_KEY")
- #   api_key=my_api_key
-#)
 client = anthropic.Anthropic()
-
-
-
 
 def chatbot():
   messages = [
@@ -35,23 +30,29 @@ def chatbot():
 
     # Add each new message to the list
     messages.append({"role": "user", "content": message})
-
+    #myModel="claude-3-opus-20240229"
+    myModel="claude-3-sonnet-20240229" 
     # Request gpt-3.5-turbo for chat completion
     response = client.messages.create(
-      model="claude-3-opus-20240229",
+      
+      model=myModel,
       max_tokens=1024,
       messages=messages,
       temperature=1,
-      system=myActAsPrompts.theBestCoach
+      system=myActAsPrompts.dentist
     )
 
     # Print the response and add it to the messages list
     claude_response = response.content[0].text
+
+    #for chunk in response:
+    #  print(chunk['completion_text'], end='', flush=True)
+    #time.sleep(0.1)  # Add a small delay for better readability
   
     chat_message = claude_response
   
     print(f"Bot: {chat_message}")
-    messages.append({"role": "assistant", "content": chat_message})
+    messages.append({"role": "assistant", "content": response})
 
 if __name__ == "__main__":
   print("Start chatting with the bot (type 'quit' to stop)!")

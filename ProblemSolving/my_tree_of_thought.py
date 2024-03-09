@@ -6,8 +6,16 @@ from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
 from langchain_openai import ChatOpenAI
 import theProblems
-from config import set_environment
+import sys
+import os
 
+
+# Get the absolute path of the root directory
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Add the root directory to the Python path
+sys.path.append(ROOT_DIR)
+
+from myModules.config import set_environment
 set_environment()
 
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
@@ -15,9 +23,8 @@ llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
-You are a system engineer with a strong command of technical problem solving techniques 
-to decompose problems. 
-Generate {num_solutions} distinct solutions for {problem}. 
+You are a system engineer with experience in problem solving techniques. You can think outside the box for creatives solutions.
+Generate {num_solutions} distinct solutions for <problem>{problem}</problem>. 
 Consider factors like {factors}. 
 Solutions:
 """
@@ -83,7 +90,7 @@ tot_chain = SequentialChain(
    verbose=True
 )
 
-theSituation = theProblems.TheRestaurantDefinition()
+theSituation = theProblems.TheNoisyPickleballGame()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 

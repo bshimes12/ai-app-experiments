@@ -19,9 +19,9 @@ model = ChatOpenAI(
 
 
 # The Problem
-theSituation = theProblems.THeMissingMail()
+theSituation = theProblems.TheNoisyPickleballGame()
 theProblem = theSituation["THE_PROBLEM"]  
-myTechnique = ProblemSolvingTechniques.ExperimentalProblemSolving
+myTechnique = ProblemSolvingTechniques.FeedbackLoopCreation
 
 prompt = PromptTemplate(input_variables=["problem"], template=myTechnique)
 chain = prompt | model
