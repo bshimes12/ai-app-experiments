@@ -1,6 +1,12 @@
+import os
+import sys
 import openai
+# Get the absolute path of the root directory
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Add the root directory to the Python path
+sys.path.append(ROOT_DIR)
 
-openai.api_key = "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"
-
+from myModules.config import set_environment
+set_environment()
 completion = openai.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Give me 3 ideas for apps I could build with openai apis "}])
 print(completion.choices[0].message.content)

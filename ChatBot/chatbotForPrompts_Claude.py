@@ -39,7 +39,7 @@ def chatbot():
       max_tokens=1024,
       messages=messages,
       temperature=1,
-      system=myActAsPrompts.dentist
+      system=myActAsPrompts.diyExpert
     )
 
     # Print the response and add it to the messages list
@@ -52,7 +52,7 @@ def chatbot():
     chat_message = claude_response
   
     print(f"Bot: {chat_message}")
-    messages.append({"role": "assistant", "content": response})
+    messages.append({"role": "assistant", "content": chat_message})
 
 if __name__ == "__main__":
   print("Start chatting with the bot (type 'quit' to stop)!")

@@ -73,3 +73,64 @@ def TheNoisyPickleballGame():
         - **Factors Influencing the Problem**: Factors include the material design of the pickleball paddles and balls, the proximity of courts to residential areas, the absence of noise dampening measures, and the increased frequency of games due to the sport's popularity.
         """
     }
+
+
+def ThePropertyDispute():
+    return{
+        "THE_PROBLEM": 
+"""
+Here is a thorough problem statement following the provided template regarding the property dispute between two homeowners over the placement of a shared fence:
+
+**Introduction**
+Two neighboring homeowners are engaged in an ongoing dispute over the proper location of the fence separating their properties. Each homeowner believes the existing fence lies on the wrong side of the legal property line, leading to disagreement over the rightful boundaries and usable space of their respective yards.
+
+**Background**  
+The properties in question have well-established homes and yards, but based on differing interpretations of property surveys and land records, the precise legal boundary line separating the two parcels remains unclear. Attempts to resolve the dispute amicably through neighborly discussion have been unsuccessful so far.
+
+**Problem Description**
+Without a conclusively determined property line, the two homeowners continue to argue over where the fence separating their yards should be properly located. This ongoing dispute fosters tensions, bad feelings, and potential legal issues between the neighbors.
+
+**Scope**
+The core issue is specifically the disagreement over the location of the legal property boundary line and the resulting uncertainty around the accurate placement of the fence dividing the two yards. Broader neighborhood disputes or homeowner association matters are outside the scope of this problem.
+
+**Direct and Indirect Consequences**
+- Strained relationship and disputes between the neighboring homeowners
+- Potential legal liabilities if one homeowner's fence illegally encroaches on the other's property 
+- Emotional stress and acrimony impacting quality of life for those involved
+- Decreased property values if the boundary uncertainty remains unresolved long-term
+
+**Objectives**
+- Definitively determine the legally recognized property boundaries separating the two parcels
+- Gain acceptance from both homeowners of the official boundary line determination
+- Relocate the existing fence to the proper location matching the legal property line
+- Restore positive relations between the neighbors once the dispute is conclusively settled
+
+**Constraints and Limitations**
+- Potentially costly legal proceedings or professional land surveys required
+- Difficulty obtaining clear historical property records from municipality 
+- Entrenched assumptions or unwillingness by one or both parties to accept official findings
+- Local laws or homeowners association rules regulating fence locations
+
+**Assumptions**  
+- The property deeds and legal descriptions can ultimately provide sufficient documentation to officially establish the true boundary line, even if presently ambiguous
+- Both homeowners will eventually adhere to official determinations of the legal property line
+
+**Stakeholder Analysis**  
+- The two feuding homeowners, who have a central stake in the property dispute's resolution
+- Other surrounding neighbors, minimally impacted but preferring resolution to restore peace
+- The municipality assessor's office, possibly involved in legal proceedings to settle the boundary
+- Land surveyors who may need to be hired to officially establish the legal property line
+
+**Urgency and Importance**
+Resolving this property line dispute through official legal channels should be considered moderately urgent. The ongoing conflict continues fueling tensions, negativity and legal risks for both homeowners until conclusively settled. Establishing clear property boundaries protects both parties' interests and legal rights over their properties.
+
+""",
+        "THE_FACTORS": 
+        """
+       - Ambiguities or mistakes in the original property surveys and legal descriptions defining the parcels
+- Differing personal assumptions by each homeowner about where the rightful property line lies  
+- Lack of motivation or ability to pursue official legal remedies to definitively settle the boundary line
+- Personality conflicts or poor communication complicating neighborly relations
+
+        """
+    }

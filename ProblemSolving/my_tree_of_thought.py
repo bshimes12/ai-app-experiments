@@ -18,8 +18,8 @@ sys.path.append(ROOT_DIR)
 from myModules.config import set_environment
 set_environment()
 
-#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
@@ -90,11 +90,11 @@ tot_chain = SequentialChain(
    verbose=True
 )
 
-theSituation = theProblems.TheNoisyPickleballGame()
+theSituation = theProblems.ThePropertyDispute()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 
-theNumSolutions = 5
+theNumSolutions = 3
 
 result = (tot_chain.invoke(
         {
