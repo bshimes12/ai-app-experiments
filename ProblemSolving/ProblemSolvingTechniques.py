@@ -1,9 +1,12 @@
 #ClassifyThis = "Classify the sentiment of this text: {text}"
+#https://pawandongre.medium.com/32-chatgpt-prompts-to-improve-problem-solving-5440fed9c2f3
+
+
 
 #Solution Evaluation Matrix Prompt#
 SolutionEvaluationMatrixPrompt = "Create an evaluation matrix for proposed solutions to the <situation> {problem}</situation>. Rank based on feasibility, impact, and timeliness."
 
-#https://pawandongre.medium.com/32-chatgpt-prompts-to-improve-problem-solving-5440fed9c2f3
+
 ## SWOT ## 
 SWOT = "Conduct a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for a proposed solution to a (specific problem: {problem})."
 
@@ -18,9 +21,6 @@ ScenarioSimulationPrompt = "Simulate potential scenarios arising from implementi
 
 MentalModelSimulation = "Describe how a specific mental model (e.g., Occam's Razor, First Principles) can be applied to dissect and understand a (specific issue <situation> {problem} </situation>)."
 
-
-#2. Brainstorming Techniques
-#Prompt:
 Brainstorming = "Detail a structured brainstorming session for a <problem> {problem} </problem>. Incorporate diverse techniques and tools for idea generation."
 
 #3. Analytical Mindset Cultivation
@@ -128,3 +128,4 @@ SolutionImpactMeasurement = "Design metrics and methods to measure the effective
 #32. Feedback-driven Problem Refinement Prompt:
 FeedbackDrivenProblemRefinement_ADD_FEEDBACK_VARIABLE = "Using feedback from stakeholders, refine a proposed solution to a <problem> {problem} </problem>. Discuss improvements, changes, and their expected outcomes."
 
+ReverseBrainStorming = "Develop innovative solutions by first focusing on how to cause, exacerbate, or continue the {problem}. Reverse these ideas to find potential solutions."

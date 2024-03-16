@@ -1,6 +1,8 @@
 ## Tree of Thoughts: Deliberate Problem Solving with Large Language Models
 ## https://arxiv.org/abs/2305.10601
 
+## python3 Advanced_tree_of_thought_Solver.py > my_solutions.txt
+
 from langchain.prompts import PromptTemplate
 from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
@@ -18,8 +20,8 @@ sys.path.append(ROOT_DIR)
 from myModules.config import set_environment
 set_environment()
 
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
-#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
@@ -87,14 +89,15 @@ tot_chain = SequentialChain(
    chains=[solutions_chain, evalutation_chain, reasoning_chain, ranking_chain],
    input_variables=["problem", "factors", "num_solutions"],
    output_variables=["ranked_solutions"],
-   verbose=True
+   verbose=True,
+   return_all=True
 )
 
-theSituation = theProblems.ThePropertyDispute()
+theSituation = theProblems.TheUnregisteredVoter()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 
-theNumSolutions = 3
+theNumSolutions = 4
 
 result = (tot_chain.invoke(
         {

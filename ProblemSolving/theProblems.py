@@ -134,3 +134,58 @@ Resolving this property line dispute through official legal channels should be c
 
         """
     }
+
+
+
+
+def TheWinterHearProblem():
+    return {
+        "THE_PROBLEM": 
+        """
+        **Introduction**: 
+During the winter months, residents of a particular house notice that the heating system does not distribute heat evenly throughout the rooms. This creates discomfort for the occupants and leads to increased energy bills as they try to compensate for the uneven heating.
+
+**Background**:
+The house in question is a two-story, single-family home that was built in the 1960s. The heating system consists of a central furnace with vents in each room. Over the years, the system has shown signs of wear and tear, leading to inconsistent heat distribution. Previous attempts to address the issue, such as adjusting the airflow and insulating the ductwork, have only provided temporary solutions.
+
+**Problem Description**:
+The uneven heating in the house is affecting all occupants, leading to discomfort in some rooms while others remain overly warm. This has resulted in conflicts among family members and increased energy consumption as the thermostat is constantly adjusted to maintain a comfortable temperature throughout the house.
+
+**Scope**:
+This problem statement will focus specifically on the heating system within the house and its inability to distribute heat evenly. It will not address other potential issues related to insulation, ventilation, or energy efficiency within the home.
+
+
+        
+        """,
+        "THE_FACTORS": 
+        """
+        **Factors Influencing the Problem**:
+        Internal factors contributing to the uneven heating may include the age and condition of the heating system, inadequate maintenance, and poor insulation in certain areas of the house. External factors such as fluctuating outdoor temperatures and air leaks in the ductwork could also impact the effectiveness of the heating system. Additionally, the layout of the house and the placement of vents may play a role in the uneven distribution of heat.
+        """
+    }
+
+def TheUnregisteredVoter():
+    return {
+        "THE_PROBLEM": 
+        """
+        **Introduction**:
+        The issue of voter registration and representation has long been a concern in democratic societies. In recent years, there has been a growing awareness of the significant number of unrepresented citizens who are not registered to vote. This problem undermines the fundamental principle of democracy, which relies on the participation of all eligible citizens in the electoral process.
+
+        **Background**:
+        Historically, voter registration processes have been complex and bureaucratic, creating barriers for many individuals, particularly those in marginalized communities. Despite efforts to streamline and simplify the registration process, there are still significant gaps in voter registration rates. Previous attempts to address this issue have included voter registration drives, outreach campaigns, and digital registration tools. However, these efforts have not fully resolved the problem of unrepresented citizens.
+
+        **Problem Description**:
+        The lack of voter registration among a large segment of the population has far-reaching consequences. Unregistered citizens are unable to exercise their right to vote and have their voices heard in the political process. This leads to a lack of representation for certain communities and can result in policies that do not reflect the diverse needs and perspectives of the population. The problem of unrepresented citizens not only undermines the democratic system but also perpetuates inequalities and disenfranchisement.
+
+        **Scope**:
+        This problem statement focuses specifically on the issue of unrepresented citizens who are not registered to vote. It does not address other aspects of voter participation, such as voter turnout or the impact of gerrymandering. By narrowing the scope to voter registration, we can better understand and address the root causes of this particular problem.
+
+
+        """,
+        "THE_FACTORS": 
+        """
+        Internal factors contributing to the problem of unrepresented citizens not registered to vote may include lack of awareness about the registration process, mistrust in the electoral system, and barriers to accessing registration materials. External factors such as socio-economic disparities, language barriers, and restrictive voter registration laws can also play a significant role in shaping voter registration rates. Additionally, technological challenges, such as outdated voter registration systems, can impact the ability of eligible citizens to register to vote. Understanding these factors is crucial for developing effective solutions to increase voter registration rates and ensure a more representative democracy.
+        """
+    }
+
+

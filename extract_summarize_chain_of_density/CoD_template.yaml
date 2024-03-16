@@ -1,0 +1,4 @@
+prompt: |
+  <human_prompt>
+  Human: {human_prompt}
+  Assistant: {response}

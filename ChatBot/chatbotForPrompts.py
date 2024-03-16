@@ -2,8 +2,6 @@
 import os
 import openai
 import myActAsPrompts as myActAsPrompts
-import promptTeamPremortem as promptTeamPremortem
-import promptTheBestCoach as promptTheBestCoach
 
 from config import set_environment
 set_environment()
