@@ -1,9 +1,15 @@
 
 import os
+import sys
 import openai
 import myActAsPrompts as myActAsPrompts
 
-from config import set_environment
+# Get the absolute path of the root directory
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Add the root directory to the Python path
+sys.path.append(ROOT_DIR)
+
+from myModules.config import set_environment
 set_environment()
 
 from openai import OpenAI
@@ -12,7 +18,7 @@ client = OpenAI()
 def chatbot():
   # Create a list to store all the messages for context
   messages = [
-    {"role": "system", "content": myActAsPrompts.chiefExecutiveOfficer},
+    {"role": "system", "content": myActAsPrompts.advertiser},
   ]
 
   # Keep repeating the following
@@ -31,7 +37,8 @@ def chatbot():
     response = client.chat.completions.create(
       model="gpt-3.5-turbo",
       messages=messages,
-      temperature=1
+      temperature=1,
+      max_tokens=150
     )
 
     # Print the response and add it to the messages list

@@ -44,7 +44,7 @@ model = ChatOpenAI(
 theDefinition = detailed_problem_statement_template.outline_template
 ##################################
 ##################################
-theProblem = "There are too many unrepresented citizens not registered to vote."
+theProblem = "There are too many citizens not registered to vote that are therefore not represented."
 ##################################
 ##################################
 ##################################
@@ -62,7 +62,7 @@ str_current_datetime = str(current_datetime)
 # create a file object along with extension
 file_name = str_current_datetime+".txt"
 
-f = open("f_ProblemSolving_" + theModel + "_" + str_current_datetime+ ".txt", "x")
+f = open("f_THE_PROBLEM_" + theModel + "_" + str_current_datetime+ ".txt", "x")
 f.write(outputFromModel.content)
 f.close()
 

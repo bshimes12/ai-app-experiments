@@ -3,7 +3,7 @@ import gradio
 
 openai.api_key = "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"
 
-messages = [{"role": "system", "content": "I want you to act as a mathematical history teacher and provide information about the historical development of mathematical concepts and the contributions of different mathematicians. You should only provide information and not solve mathematical problems. Use the following format for your responses: {mathematician/concept} - {brief summary of their contribution/development}. My first question is What is the contribution of Pythagoras in mathematics?"}]
+messages = [{"role": "system", "content": "I want you to act as a travel guide. I will write you my location and you will suggest a place to visit near my location. In some cases, I will also give you the type of places I will visit. You will also suggest me places of similar type that are close to my first location."}]
 
 def CustomChatGPT(user_input):
     messages.append({"role": "user", "content": user_input})
@@ -15,7 +15,7 @@ def CustomChatGPT(user_input):
     messages.append({"role": "assistant", "content": ChatGPT_reply})
     return ChatGPT_reply
 
-demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "Real Estate Pro")
+demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "The Expert of Everything")
 
-#demo.launch(share=True)
-demo.launch()
+demo.launch(share=True)
+#demo.launch()

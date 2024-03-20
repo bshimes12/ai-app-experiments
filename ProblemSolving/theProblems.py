@@ -168,23 +168,25 @@ def TheUnregisteredVoter():
     return {
         "THE_PROBLEM": 
         """
-        **Introduction**:
-        The issue of voter registration and representation has long been a concern in democratic societies. In recent years, there has been a growing awareness of the significant number of unrepresented citizens who are not registered to vote. This problem undermines the fundamental principle of democracy, which relies on the participation of all eligible citizens in the electoral process.
+        **Introduction**: 
+Citizens who are not registered to vote are not represented in the democratic process, which can lead to a lack of diverse perspectives and a skewed representation of the population. This problem undermines the fundamental principle of democracy where every citizen's voice should be heard.
 
-        **Background**:
-        Historically, voter registration processes have been complex and bureaucratic, creating barriers for many individuals, particularly those in marginalized communities. Despite efforts to streamline and simplify the registration process, there are still significant gaps in voter registration rates. Previous attempts to address this issue have included voter registration drives, outreach campaigns, and digital registration tools. However, these efforts have not fully resolved the problem of unrepresented citizens.
+**Background**: 
+Over the years, there have been various efforts to increase voter registration and turnout, including voter registration drives, online registration options, and outreach campaigns. Despite these initiatives, a significant number of citizens remain unregistered, leading to a gap in political participation and representation.
 
-        **Problem Description**:
-        The lack of voter registration among a large segment of the population has far-reaching consequences. Unregistered citizens are unable to exercise their right to vote and have their voices heard in the political process. This leads to a lack of representation for certain communities and can result in policies that do not reflect the diverse needs and perspectives of the population. The problem of unrepresented citizens not only undermines the democratic system but also perpetuates inequalities and disenfranchisement.
+**Problem Description**: 
+The issue at hand is the high number of citizens who are eligible to vote but are not registered to do so. This problem affects individuals who are marginalized, disenfranchised, or unaware of the importance of voting. As a result, their voices are not heard in elections, leading to a misrepresentation of the population's diverse views and interests.
 
-        **Scope**:
-        This problem statement focuses specifically on the issue of unrepresented citizens who are not registered to vote. It does not address other aspects of voter participation, such as voter turnout or the impact of gerrymandering. By narrowing the scope to voter registration, we can better understand and address the root causes of this particular problem.
+**Scope**: 
+This problem statement focuses on the lack of voter registration among eligible citizens and does not address other issues related to voter turnout or electoral systems. It specifically considers the impact of non-registration on political representation and democratic participation.
+
 
 
         """,
         "THE_FACTORS": 
         """
-        Internal factors contributing to the problem of unrepresented citizens not registered to vote may include lack of awareness about the registration process, mistrust in the electoral system, and barriers to accessing registration materials. External factors such as socio-economic disparities, language barriers, and restrictive voter registration laws can also play a significant role in shaping voter registration rates. Additionally, technological challenges, such as outdated voter registration systems, can impact the ability of eligible citizens to register to vote. Understanding these factors is crucial for developing effective solutions to increase voter registration rates and ensure a more representative democracy.
+        **Factors Influencing the Problem**: 
+Internal factors such as lack of awareness, apathy, or disillusionment with the political system can contribute to low voter registration rates. External factors like restrictive registration laws, limited access to registration materials, or misinformation can also hinder the registration process. Additionally, social and cultural norms may play a role in deterring certain groups from registering to vote.
         """
     }
 

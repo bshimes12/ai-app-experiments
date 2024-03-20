@@ -13,7 +13,12 @@ sys.path.append(ROOT_DIR)
 from myModules.config import set_environment
 set_environment()
 
-llm = ChatAnthropic(model='claude-2.1')
+myModel="claude-3-opus-20240229"
+#myModel="claude-3-haiku-20240307"
+#myModel="claude-3-sonnet-20240229"
+#myModel="claude-2.1"
+
+llm = ChatAnthropic(model=myModel)
 template_1 = "<human_prompt>Human: You are a outside observer with keen insight, list 3 ambiguities in the followings text\n {wiki_text}\n\n Assistant:"
 prompt_1 = ChatPromptTemplate.from_template(template_1)
 llm_chain_1 = LLMChain(

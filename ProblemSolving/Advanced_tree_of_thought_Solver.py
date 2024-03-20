@@ -21,11 +21,11 @@ from myModules.config import set_environment
 set_environment()
 
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
-#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
-You are a system engineer with experience in problem solving techniques. You can think outside the box for creatives solutions.
+You are a public policy expert with experience in implementing major programs. You think outside the box for creatives solutions.
 Generate {num_solutions} distinct solutions for <problem>{problem}</problem>. 
 Consider factors like {factors}. 
 Solutions:
@@ -97,7 +97,7 @@ theSituation = theProblems.TheUnregisteredVoter()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 
-theNumSolutions = 4
+theNumSolutions = 3
 
 result = (tot_chain.invoke(
         {

@@ -15,9 +15,7 @@ set_environment()
 client = anthropic.Anthropic()
 
 def chatbot():
-  messages = [
-   # {"role": "user", "content": myActAsPrompts.astrologer},
-  ]
+  messages = []
 
   # Keep repeating the following
   while True:
@@ -31,23 +29,20 @@ def chatbot():
     # Add each new message to the list
     messages.append({"role": "user", "content": message})
     #myModel="claude-3-opus-20240229"
-    myModel="claude-3-sonnet-20240229" 
+    myModel="claude-3-haiku-20240307"
+    #myModel="claude-3-sonnet-20240229" 
     # Request gpt-3.5-turbo for chat completion
     response = client.messages.create(
       
       model=myModel,
-      max_tokens=1024,
+      max_tokens=500,
       messages=messages,
       temperature=1,
-      system=myActAsPrompts.diyExpert
+      system=myActAsPrompts.startupIdeaGenerator
     )
 
     # Print the response and add it to the messages list
     claude_response = response.content[0].text
-
-    #for chunk in response:
-    #  print(chunk['completion_text'], end='', flush=True)
-    #time.sleep(0.1)  # Add a small delay for better readability
   
     chat_message = claude_response
   
