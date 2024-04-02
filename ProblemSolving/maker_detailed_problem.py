@@ -44,7 +44,7 @@ model = ChatOpenAI(
 theDefinition = detailed_problem_statement_template.outline_template
 ##################################
 ##################################
-theProblem = "There are too many citizens not registered to vote that are therefore not represented."
+theProblem = "The report I generate for every customer works for most customers but not everyone. I do not have resources to customize a report for each customer."
 ##################################
 ##################################
 ##################################

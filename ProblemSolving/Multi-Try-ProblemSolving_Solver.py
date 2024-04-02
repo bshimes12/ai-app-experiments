@@ -30,10 +30,10 @@ theSituation = theProblems.TheNoisyPickleballGame()
 theProblem = theSituation["THE_PROBLEM"]  
 """
 #### Simple String
-theProblem = "I cannot find fill a janitor position in my office." 
+theProblem = "The report I generate for every customer works for most customers but not everyone. I do not have resources to customize a report for each customer." 
 
 #### How do you want to solve it
-myTechnique = ProblemSolvingTechniques.ReverseBrainStorming
+myTechnique = ProblemSolvingTechniques.FailureModeAnalysis
 
 prompt = PromptTemplate(input_variables=["problem"], template=myTechnique)
 chain = prompt | model
