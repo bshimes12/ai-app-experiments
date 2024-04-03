@@ -38,7 +38,7 @@ def chatbot():
       max_tokens=500,
       messages=messages,
       temperature=1,
-      system=myActAsPrompts.startupIdeaGenerator
+      system=myActAsPrompts.aiTryingToEscapeTheBox
     )
 
     # Print the response and add it to the messages list
