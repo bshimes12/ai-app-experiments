@@ -1,20 +1,33 @@
 import os
-
+import sys
 from crewai import Agent, Task, Process, Crew
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.llms import Ollama
+from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+#from langchain_google_genai import ChatGoogleGenerativeAI
+#from langchain.llms import Ollama
 
-# To Load Local models through Ollama
-mistral = Ollama(model="mistral")
+# Get the absolute path of the root directory
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Add the root directory to the Python path
+sys.path.append(ROOT_DIR)
 
-# To Load GPT-4
-api = os.environ.get("OPENAI_API_KEY")
+from myModules.config import set_environment
+set_environment()
 
-# To load gemini (this api is for free: https://makersuite.google.com/app/apikey)
-api_gemini = os.environ.get("GEMINI-API-KEY")
-llm = ChatGoogleGenerativeAI(
-    model="gemini-pro", verbose=True, temperature=0.1, google_api_key=api_gemini
-)
+
+## Anthropic
+#myModel="claude-3-opus-20240229"
+myModel="claude-3-haiku-20240307"
+#myModel="claude-3-sonnet-20240229"
+#myModel="claude-2.1"
+llm = ChatAnthropic(model=myModel)
+
+# ChatGPT
+####llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+
+
 
 marketer = Agent(
     role="Market Research Analyst",
@@ -25,7 +38,7 @@ marketer = Agent(
 		""",
     verbose=True,  # enable more detailed or extensive output
     allow_delegation=True,  # enable collaboration between agent
-    #   llm=llm # to load gemini
+    llm=llm # to load gemini
 )
 
 technologist = Agent(
@@ -38,7 +51,7 @@ technologist = Agent(
 		operational efficiency but also provides a competitive edge in the market.""",
     verbose=True,  # enable more detailed or extensive output
     allow_delegation=True,  # enable collaboration between agent
-    #   llm=llm # to load gemini
+    llm=llm # to load gemini
 )
 
 business_consultant = Agent(
@@ -50,32 +63,34 @@ business_consultant = Agent(
 		about immediate gains but about building a resilient and adaptable business that can thrive in a changing market.""",
     verbose=True,  # enable more detailed or extensive output
     allow_delegation=True,  # enable collaboration between agent
-    #   llm=llm # to load gemini
+    llm=llm # to load gemini
 )
 
 task1 = Task(
     description="""Analyze what the market demand for plugs for holes in crocs (shoes) so that this iconic footware looks less like swiss cheese. 
-		Write a detailed report with description of what the ideal customer might look like, and how to reach the widest possible audience. The report has to 
-		be concise with at least 10 bullet points and it has to address the most important areas when it comes to marketing this type of business.
+		Write a detailed report with description of what the ideal customer might look like, and how to reach the widest possible audience.
+    The report has to be concise with at least 10 bullet points and it has to address the most important areas when it comes to marketing this type of business.
     """,
     agent=marketer,
+    expected_output="A Report",
 )
 
 task2 = Task(
     description="""Analyze how to produce plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese.. Write a detailed report 
-		with description of which technologies the business needs to use in order to make High Quality T shirts. The report has to be concise with 
-		at least 10  bullet points and it has to address the most important areas when it comes to manufacturing this type of business. 
+		with description of which technologies the business needs to use in order to produce plugs for crocs (shoes). 
+    The report has to be concise with at least 10  bullet points and it has to address the most important areas when it comes to manufacturing this type of business.    
     """,
     agent=technologist,
+    expected_output="The Report",
 )
 
 task3 = Task(
     description="""Analyze and summarize marketing and technological report and write a detailed business plan with 
 		description of how to make a sustainable and profitable "plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese" business. 
-		The business plan has to be concise with 
-		at least 10  bullet points, 5 goals and it has to contain a time schedule for which goal should be achieved and when.
+		The business plan has to be concise with at least 10  bullet points, 5 goals and it has to contain a time schedule for which goal should be achieved and when.
     """,
     agent=business_consultant,
+    expected_output="The Plan",
 )
 
 crew = Crew(

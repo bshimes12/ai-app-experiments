@@ -43,7 +43,7 @@ model = ChatOpenAI(
 theDefinition = detailed_problem_statement_template.outline_template
 ##################################
 ##################################
-theProblem = "There are too many citizens not registered to vote that are therefore not represented."
+theProblem = "There is a property dispute between neighbors A and B. Neighbor A just planted landscaping on back of their property. Neighbor B claims that it is their property and they want to reclaim it even though it was previously unused. Neighbor B has some evidence this it is their propery but Neighbor A would like some sort of compromise because the property is neglected."
 ##################################
 ##################################
 ##################################
