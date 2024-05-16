@@ -14,7 +14,7 @@ client = OpenAI()
 def chatbot():
   # Create a list to store all the messages for context
   messages = [
-    {"role": "system", "content": myActAsPrompts.petBehaviorist},
+    {"role": "system", "content": myActAsPrompts.dreamInterpreter},
   ]
 
   # Keep repeating the following

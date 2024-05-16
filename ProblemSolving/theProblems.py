@@ -191,3 +191,53 @@ Internal factors such as lack of awareness, apathy, or disillusionment with the 
     }
 
 
+def TheAbstractLife():
+    return {
+        "THE_PROBLEM": 
+        """
+        
+When one is most commonly working in the abstract, life can get a plain and lackluster feeling. 
+
+Introduction: In a fast-paced and ever-changing world, individuals often find themselves engaging in abstract thinking and analysis, which can lead to a sense of detachment from the tangible aspects of life. This problem can have profound impacts on one's emotional well-being, relationships, and overall quality of life.
+
+Background: The prevalence of abstract thinking in modern society can be attributed to various factors, such as the increasing reliance on technology, the emphasis on critical thinking in education, and the influence of social media. This shift towards abstract thinking can result in individuals feeling disconnected from their surroundings and struggling to find meaning in their daily experiences.
+
+Problem Description: The problem of feeling plain and detached due to working in the abstract primarily affects individuals who are heavily engaged in analytical or creative work. Symptoms of this issue may include feelings of emptiness, lack of motivation, and a sense of disconnection from one's emotions and surroundings. This can lead to decreased productivity, relationship difficulties, and overall dissatisfaction with life.
+
+Scope: This problem statement focuses on the impact of abstract thinking on individuals' mental and emotional well-being. It does not address broader societal issues related to abstract thinking or philosophical debates on the nature of reality.
+
+
+
+        """,
+        "THE_FACTORS": 
+        """
+        Factors Influencing the Problem: Internal factors such as personality traits, cognitive biases, and coping mechanisms can play a role in how individuals experience the effects of abstract thinking. External factors, such as work environment, social norms, and cultural values, can also influence the prevalence of abstract thinking in one's life. Addressing these factors is crucial in developing effective strategies to combat feelings of detachment and plainness in individuals working in the abstract.
+        """
+    }
+
+
+
+
+
+
+
+
+def NeighborANeighborB_Dispute():
+    return {
+        "THE_PROBLEM": 
+        """
+        
+Introduction: There is a property dispute between neighbors A and B regarding the ownership of a recently landscaped area on Neighbor A's property.
+
+Background: Neighbor A recently planted landscaping on the back of their property that Neighbor B claims is actually their property. Neighbor B has some evidence supporting their claim, but Neighbor A argues that the area was previously unused and neglected.
+
+Problem Description: The problem at hand is the disagreement over the ownership of the landscaped area between neighbors A and B. This conflict is causing tension between the two parties and has the potential to escalate if not resolved peacefully.
+
+Scope: The scope of this problem includes determining the rightful ownership of the landscaped area and finding a compromise that satisfies both Neighbor A and Neighbor B. Any legal implications or potential solutions outside of a compromise will not be included in the scope of this problem statement.
+
+        """,
+        "THE_FACTORS": 
+        """
+        Factors Influencing the Problem: Internal factors such as personal beliefs and values, as well as external factors like property laws and past interactions between the neighbors, are influencing the conflict. Additionally, the neglected state of the property in question may be a contributing factor to the dispute.
+        """
+    }

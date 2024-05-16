@@ -7,6 +7,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import SequentialChain
 from langchain.chains.llm import LLMChain
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 import theProblems
 import sys
 import os
@@ -22,10 +23,18 @@ set_environment()
 
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+
+## Anthropic
+myModel="claude-3-opus-20240229"
+#myModel="claude-3-haiku-20240307"
+#myModel="claude-3-sonnet-20240229"
+#myModel="claude-2.1"
+llm = ChatAnthropic(model=myModel)
+
 
 solutions_template = """
-You are a public policy expert with experience in implementing major programs. You think outside the box for creatives solutions.
+You are a coach and mentor with experience in giving innovative and thoughtful advice. You approach all issues to offer kind and creatives solutions.
 Generate {num_solutions} distinct solutions for <problem>{problem}</problem>. 
 Consider factors like {factors}. 
 Solutions:
@@ -93,7 +102,7 @@ tot_chain = SequentialChain(
    return_all=True
 )
 
-theSituation = theProblems.TheUnregisteredVoter()
+theSituation = theProblems.NeighborANeighborB_Dispute()
 theProblem = theSituation["THE_PROBLEM"]  
 theFactors = theSituation["THE_FACTORS"]  
 
