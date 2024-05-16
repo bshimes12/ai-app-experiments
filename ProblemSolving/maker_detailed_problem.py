@@ -23,7 +23,7 @@ set_environment()
 theModel = 'gpt-3.5-turbo-0125' # use model = ChatOpenAI and from langchain_openai import ChatOpenAI
 model = ChatOpenAI(
     model=theModel,
-    temperature=1.0, verbose=True)
+    temperature=0, verbose=True)
 
 ##################################
 ##################################
@@ -44,7 +44,9 @@ model = ChatOpenAI(
 theDefinition = detailed_problem_statement_template.outline_template
 ##################################
 ##################################
-theProblem = "The report I generate for every customer works for most customers but not everyone. I do not have resources to customize a report for each customer."
+theProblem = """
+The core metrics are not defined, owned, and their is no oversight.
+"""
 ##################################
 ##################################
 ##################################

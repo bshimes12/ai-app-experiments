@@ -11,6 +11,9 @@ import theProblems
 import sys
 import os
 
+from langchain.callbacks import StdOutCallbackHandler
+from contextlib import redirect_stdout
+
 
 # Get the absolute path of the root directory
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -21,8 +24,8 @@ from myModules.config import set_environment
 set_environment()
 
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
-#llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
+#llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
 
 solutions_template = """
 You are a public policy expert with experience in implementing major programs. You think outside the box for creatives solutions.
@@ -85,41 +88,61 @@ ranking_chain = LLMChain(
    output_key="ranked_solutions",
    verbose=True
 )
+
+handler = StdOutCallbackHandler()
+
 tot_chain = SequentialChain(
    chains=[solutions_chain, evalutation_chain, reasoning_chain, ranking_chain],
    input_variables=["problem", "factors", "num_solutions"],
    output_variables=["ranked_solutions"],
    verbose=True,
-   return_all=True
+   return_all=True,
+   callbacks=[handler]
 )
 
 
 theProblem = """
 
-**Introduction**: The report generated for customers is not meeting the needs of all customers due to lack of customization.
+**Introduction**: The lack of defined core metrics, ownership, and oversight is hindering the effectiveness of the organization in achieving its goals and objectives. Without clear metrics to measure progress, it is difficult to track performance and make informed decisions.
 
-**Background**: The current report generation process has been in place for some time, and while it works for most customers, there have been growing complaints about its inability to meet the unique needs of some customers. Previous attempts to address this issue have been limited by resource constraints.
+**Background**: In the past, the organization has struggled with setting and tracking key performance indicators (KPIs) due to a lack of clarity on ownership and oversight. This has led to confusion, inefficiencies, and missed opportunities for improvement. Previous attempts to address this issue have been short-lived and ineffective.
 
-**Problem Description**: The current report generation process is unable to provide customized reports for each individual customer, leading to dissatisfaction among some customers. This lack of customization impacts the ability of customers to extract value from the reports and may hinder their overall satisfaction with the product.
+**Problem Description**: The core metrics are not clearly defined, leading to confusion and inconsistency in measuring performance. Without ownership of these metrics, there is no accountability for tracking and improving them. Additionally, the lack of oversight means that there is no mechanism in place to ensure that the metrics are being monitored and acted upon.
 
-**Scope**: This problem statement focuses specifically on the limitations of the current report generation process and does not encompass broader issues related to customer satisfaction or product development.
+**Scope**: This problem statement focuses specifically on the lack of defined core metrics, ownership, and oversight within the organization. It does not address other potential issues that may be present in the organization.
 
 """
 
 theFactors = """
-**Factors Influencing the Problem**: Internal factors such as resource constraints and technological limitations are influencing the inability to customize reports for each customer. External factors such as differing customer needs and expectations also contribute to the problem.
+**Factors Influencing the Problem**: Internal factors such as unclear roles and responsibilities, lack of communication, and resistance to change are contributing to the problem. External factors such as market competition and regulatory requirements may also impact the organization's ability to define and track core metrics effectively.
 """ 
 
 theNumSolutions = 3
 
-result = (tot_chain.invoke(
+output = (tot_chain.invoke(
         {
         "problem": theProblem,
         "factors": theFactors, 
         "num_solutions": theNumSolutions
         }
     ))
-print(result['ranked_solutions'])
+
+with open("output.txt", "w") as file:
+    # Redirect stdout to the file
+    with redirect_stdout(file):
+        # Run the chain
+        output = (tot_chain.invoke(
+        {
+        "problem": theProblem,
+        "factors": theFactors, 
+        "num_solutions": theNumSolutions
+        }
+    ))
+    file.write("\nRanked Solutions:\n")
+    file.write(str(output['ranked_solutions'])) 
+
+
+#print(output['ranked_solutions'])
 
 
 if __name__ == "__main__":
