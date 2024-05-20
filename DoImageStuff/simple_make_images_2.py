@@ -11,9 +11,20 @@ sys.path.append(ROOT_DIR)
 from myModules.config import set_environment
 set_environment()
 
+"""
+prompt = 
+Develop a offbeat brand identity for a new website called \"ideaatoms.\" 
+The brand focuses on exploring the cool hands-on capabilities of generative AI. ideaatoms is calm and a place where there are no stupid questions.\n\n
+The brand identity should achieve the following goals:\n
+1. Make people curious.\n
+2. Be a commentary on AI as a cognitive advancement.\n
+3. A key point is that humans now computers can reason.\n
+4. Make it fresh and clear and simple.\n
+Do not make spelling mistakes.
+"""
 
 prompt = """
-Develop a offbeat brand identity for a new silly website called \"AI Art Barf.\" The brand focuses on creating funny and entertaining images that are from AI hallucinations. AI Art Barf is in good taste and not mean-spirited.\n\nThe brand identity should achieve the following goals:\n1. Make people laugh.\n2. Be a commentary on AI Art and that it is sometimes weird and funny.\n3. A key point is that humans are critics and robots (AI) are not.\n4. Make it funny and a bit retro and odd like an AI hallucination.
+dog riding a pony next to a fox
 """
 #prompt = 'cute bunny being chased by fox'
 
@@ -22,7 +33,7 @@ client = OpenAI()
 response = client.images.generate(
     prompt=prompt,
     n=1,
-    size="1024x1024",
+    size="1792x1024",
     response_format="url",
     quality="standard",
     model="dall-e-3",
