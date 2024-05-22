@@ -17,15 +17,18 @@ set_environment()
 
 ## Anthropic
 #myModel="claude-3-opus-20240229"
-myModel="claude-3-haiku-20240307"
+#myModel="claude-3-haiku-20240307"
 #myModel="claude-3-sonnet-20240229"
 #myModel="claude-2.1"
-llm = ChatAnthropic(model=myModel)
+
+#llm = ChatAnthropic(model=myModel)
 
 # ChatGPT
 ####llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo-0125")
 #llm = ChatOpenAI(temperature=0.7, model_name="gpt-4-0613")
+
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-4o")
 
 
 
@@ -66,8 +69,9 @@ business_consultant = Agent(
     llm=llm # to load gemini
 )
 
+#Analyze what the market demand for plugs for holes in crocs (shoes) so that this iconic footware looks less like swiss cheese
 task1 = Task(
-    description="""Analyze what the market demand for plugs for holes in crocs (shoes) so that this iconic footware looks less like swiss cheese. 
+    description="""Analyze what the market demand for one-on-one coaching for non-technical or semi-technical people ages 45-70 to understand AI and what it can do for them personally. 
 		Write a detailed report with description of what the ideal customer might look like, and how to reach the widest possible audience.
     The report has to be concise with at least 10 bullet points and it has to address the most important areas when it comes to marketing this type of business.
     """,
@@ -75,23 +79,25 @@ task1 = Task(
     expected_output="A Report",
 )
 
+#Analyze how to produce plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese.
 task2 = Task(
-    description="""Analyze how to produce plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese.. Write a detailed report 
-		with description of which technologies the business needs to use in order to produce plugs for crocs (shoes). 
-    The report has to be concise with at least 10  bullet points and it has to address the most important areas when it comes to manufacturing this type of business.    
+    description="""Analyze what the market demand for one-on-one coaching for non-technical or semi-technical people ages 45-70 to understand AI and what it can do for them personally. Write a detailed report 
+with description of which content and technologies the business needs to use in order to produce one-one-one coaching. 
+    The report has to be concise with at least 10 bullet points and it has to address the most important areas when it comes to manufacturing this type of business.    
     """,
     agent=technologist,
     expected_output="The Report",
 )
-
+#"plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese"
 task3 = Task(
     description="""Analyze and summarize marketing and technological report and write a detailed business plan with 
-		description of how to make a sustainable and profitable "plugs for crocs (shoes) so that this iconic footware looks less like swiss cheese" business. 
+		description of how to make a sustainable and profitable "one-on-one coaching for non-technical or semi-technical people ages 45-70 to understand AI" business. 
 		The business plan has to be concise with at least 10  bullet points, 5 goals and it has to contain a time schedule for which goal should be achieved and when.
     """,
     agent=business_consultant,
     expected_output="The Plan",
 )
+
 
 crew = Crew(
     agents=[marketer, technologist, business_consultant],
