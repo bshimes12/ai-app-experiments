@@ -5,7 +5,7 @@ load_dotenv()
 
 assistant_id = 'asst_ugRzy1ru2Xnvk6uLD5LDJavb'
 api_key = os.getenv("OPENAI_API_KEY")
-#api_key = "sk-proj-n0vSHsctXCZJ2q7HiZFTT3BlbkFJU6joaeRET12F3BBbYTuG"
+#api_key = ""
 file_path = "/Users/bower/code/justPrompts/openai_assistant_files/f_THE_PROBLEM_gpt-3.5-turbo-0125_2024-04-16 09-18-50.txt"
 
 def upload_file_to_existing_assistant(api_key, assistant_id, file_path):
